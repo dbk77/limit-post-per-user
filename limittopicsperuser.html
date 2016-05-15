@@ -1,0 +1,94 @@
+<!-- INCLUDE overall_header.html -->
+
+<h1>{L_LIMIT_POSTS_PER_USER_TITLE}</h1>
+<p>{L_LIMIT_POSTS_PER_USER_EXPLAIN}</p>
+
+<form id="limitpostsperuser" method="post" action="{U_ACTION}">
+
+	<fieldset>
+		<legend>{L_LPPU_GLOBAL_SETTINGS}</legend>
+		<dl>
+			<dt><label for="lppu_enable">{L_LPPU_ENABLE}{L_COLON}</label><br /><span>{L_LPPU_ENABLE_EXPLAIN}</span></dt>
+			<dd><label><input type="radio" class="radio" name="lppu_enable" value="1" id="lppu_enable"<!-- IF PTPU_ENABLE --> checked="checked"<!-- ENDIF -->/> 
+{L_ENABLE}</label>
+			<label><input type="radio" class="radio" name="lppu_enable" value="0" <!-- IF not LPPU_ENABLE --> checked="checked"<!-- ENDIF --> /> {L_DISABLE}</label></dd>
+		</dl>
+	</fieldset>
+
+	<fieldset>
+		<legend>{L_LPPU_SETTINGS_PER_DAY_TITLE}</legend>
+		<dl>
+			<dt><label for="lppu_per_day_check">{L_LPPU_PER_DAY_CHECK}{L_COLON}</label><br /><span>{L_LPPU_PER_DAY_CHECK_EXPLAIN}</span></dt>
+			<dd><label><input type="radio" class="radio" name="lppu_per_day_check" value="1" id="lppu_per_day_check"<!-- IF LPPU_PER_DAY_CHECK --> checked="checked"<!-- ENDIF -->/> {L_ENABLE}</label>
+			<label><input type="radio" class="radio" name="lppu_per_day_check" value="0" <!-- IF not PTPU_PER_DAY_CHECK --> checked="checked"<!-- ENDIF --> /> {L_DISABLE}</label></dd>
+		</dl>
+		<dl>
+			<dt><label for="lppu_per_day_settings">{L_LPPU_PER_DAY_SETTINGS}{L_COLON}</label><br /><span>{L_LPPU_PER_DAY_SETTINGS_EXPLAIN}</span></dt>
+			<dd><label><input type="text" size="100" name="lppu_per_day_settings" id="lppu_per_day_settings" value="{LPPU_PER_DAY_SETTINGS}"></label>
+			</dd>
+		</dl>
+	</fieldset>
+
+	<fieldset>
+		<legend>{L_LPPU_SETTINGS_PER_WEEK_TITLE}</legend>
+		<dl>
+			<dt><label for="lppu_per_week_check">{L_LPPU_PER_WEEK_CHECK}{L_COLON}</label><br /><span>{L_LPPU_PER_WEEK_CHECK_EXPLAIN}</span></dt>
+			<dd><label><input type="radio" class="radio" name="lppu_per_week_check" value="1" id="lppu_per_week_check"<!-- IF LPPU_PER_WEEK_CHECK --> checked="checked"<!-- ENDIF -->/> {L_ENABLE}</label>
+			<label><input type="radio" class="radio" name="lppu_per_week_check" value="0" <!-- IF not LPPU_PER_WEEK_CHECK --> checked="checked"<!-- ENDIF --> /> {L_DISABLE}</label></dd>
+		</dl>
+		<dl>
+			<dt><label for="lppu_per_week_settings">{L_LPPU_PER_WEEK_SETTINGS}{L_COLON}</label><br /><span>{L_LPPU_PER_WEEK_SETTINGS_EXPLAIN}</span></dt>
+			<dd><label><input type="text" size="100" name="lppu_per_week_settings" id="lppu_per_week_settings" value="{LPPU_PER_WEEK_SETTINGS}"></label>
+			</dd>
+		</dl>
+	</fieldset>
+
+	<fieldset>
+		<legend>{L_LPPU_SETTINGS_PER_MONTH_TITLE}</legend>
+		<dl>
+			<dt><label for="lppu_per_month_check">{L_LPPU_PER_MONTH_CHECK}{L_COLON}</label><br /><span>{L_LPPU_PER_MONTH_CHECK_EXPLAIN}</span></dt>
+			<dd><label><input type="radio" class="radio" name="lppu_per_month_check" value="1" id="lppu_per_month_check"<!-- IF LPPU_PER_MONTH_CHECK --> checked="checked"<!-- ENDIF -->/> {L_ENABLE}</label>
+			<label><input type="radio" class="radio" name="lppu_per_month_check" value="0" <!-- IF not LPPU_PER_MONTH_CHECK --> checked="checked"<!-- ENDIF --> /> {L_DISABLE}</label></dd>
+		</dl>
+		<dl>
+			<dt><label for="lppu_per_month_settings">{L_LPPU_PER_MONTH_SETTINGS}{L_COLON}</label><br /><span>{L_LPPU_PER_MONTH_SETTINGS_EXPLAIN}</span></dt>
+			<dd><label><input type="text" size="100" name="lppu_per_month_settings" id="lppu_per_month_settings" value="{LPPU_PER_MONTH_SETTINGS}"></label>
+			</dd>
+		</dl>
+	</fieldset>
+
+	<fieldset>
+		<legend>{L_LPPU_FORUM_SETTINGS_EXPLAINED}</legend>
+		<p>{L_LPPU_FORUM_SETTINGS_EXPLAINED_TEXT}</p>
+	</fieldset>
+  
+	<fieldset>
+		<legend>{L_LPPU_INCLUDED_GROUPS_TITLE}</legend>
+		<dl>
+			<dt><label for="lppu_included_group_ids">{L_LPPU_INCLUDED_GROUPS}{L_COLON}</label><br /><span>{L_PTPU_INCLUDED_GROUPS_EXPLAIN}<br />{L_LPPU_INCLUDED_GROUP_IDS_EXPLAIN}</span></dt>
+			<dd><label><input type="text" size="100" name="lppu_included_group_ids" id="lppu_included_group_ids" value="{LPPU_INCLUDED_GROUP_IDS}">
+			</label>
+			</dd>
+		</dl>
+	</fieldset>
+
+	<fieldset>
+		<legend>{L_LPPU_EXCLUDED_RANKS_TITLE}</legend>
+		<dl>
+			<dt><label for="lppu_excluded_rank_ids">{L_LPPU_EXCLUDED_RANKS}{L_COLON}</label><br /><span>{L_LPPU_EXCLUDED_RANKS_EXPLAIN}</span></dt>
+			<dd><label><input type="text" size="100" name="lppu_excluded_rank_ids" id="lppu_excluded_rank_ids" value="{LPPU_EXCLUDED_RANK_IDS}"></label>
+			</dd>
+		</dl>
+	</fieldset>
+
+	<fieldset>
+		<legend>{L_ACP_SUBMIT_CHANGES}</legend>
+		<p class="submit-buttons">
+			<input class="button1" type="submit" id="submit" name="submit" value="{L_SUBMIT}" />&nbsp;
+			<input class="button2" type="reset" id="reset" name="reset" value="{L_RESET}" />
+		</p>
+		{S_FORM_TOKEN}
+	</fieldset>
+</form>
+
+<!-- INCLUDE overall_footer.html -->
