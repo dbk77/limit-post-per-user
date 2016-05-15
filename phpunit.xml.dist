@@ -1,1 +1,1 @@
-phpBB\vendor\bin\phpunit.bat -c phpBB\ext\acme\demo\phpunit.xml.dist
+phpBB\vendor\bin\phpunit.bat -c phpBB\ext\dbk\limittopicsperuser\phpunit.xml.dist
