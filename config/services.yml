@@ -1,0 +1,21 @@
+services:
+    dbk.limitpostsperuser.listener:
+        class: dbk\limitpostsperuser\event\listener
+        arguments:
+            - @config
+            - @template
+            - @auth
+            - @user
+            - @dbal.conn
+            - @service_container
+        tags:
+            - { name: event.listener }
+            
+    dbk.limitpostsperuser.admin.controller:
+        class: dbk\limitpostsperuser\controller\admin_controller
+        arguments:
+            - @config
+            - @request
+            - @template
+            - @user
+            - @service_container
